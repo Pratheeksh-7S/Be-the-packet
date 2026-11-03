@@ -44,3 +44,43 @@ section h2 { font-size: 2rem; margin-top: 0; }
 #top p:first-child { color: var(--orange); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; }
 #top h1 { font-size: clamp(2rem, 6vw, 3.4rem); margin: 8px 0; line-height: 1.15; }
 #top p:last-child { color: var(--muted); font-size: 1.1rem; max-width: 650px; }
+
+/* ===== About Me facts box ===== */
+#about ul { list-style: none; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+#about li { padding: 6px 0; }
+#about strong { color: var(--orange); }
+
+/* ===== Skill and project cards ===== */
+.skills, .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.skill-card, .project {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.skill-card:hover, .project:hover { transform: translateY(-4px); border-color: var(--orange); }
+.skill-card h3, .project h3 { margin-top: 0; }
+.skill-card p, .project p { color: var(--muted); }
+.project .tags { color: var(--teal); font-size: 0.85rem; }
+
+/* ===== Contact buttons ===== */
+#contact { text-align: center; }
+.buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+.btn {
+  padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 600;
+  border: 1px solid var(--line); color: var(--text);
+}
+.btn:first-child { background: var(--orange); color: #111; border-color: var(--orange); }
+.btn:hover { border-color: var(--teal); }
+
+/* ===== Phones ===== */
+@media (max-width: 600px) {
+  header { justify-content: center; }
+  nav { justify-content: center; gap: 14px; font-size: 0.95rem; }
+  section h2 { font-size: 1.6rem; }
+}
